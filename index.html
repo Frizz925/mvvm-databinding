@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MVVM Data Binding</title>
+</head>
+<body>
+  <div id="app">
+    <div>
+      <h3>{{ hello() }}</h3>
+      <span>{{ fruits[0] }}</span>
+    </div>
+    <input type="text" vm-model="fruits[0]">
+    <div>
+      <span>{{ user.username }}</span>
+    </div>
+    <input type="text" vm-model="user.username">
+    <ul>
+      <li vm-repeat="fruit in fruits">{{ fruit }}</li>
+    </ul>
+    <div>
+      <pre>{{ json }}</pre>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
